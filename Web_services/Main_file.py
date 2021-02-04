@@ -94,8 +94,8 @@ def sendEmail(to, content):
     server.starttls()
 
     # Enable low security in gmail
-    server.login('170320107063.ce.shubham@gmail.com', 'JAYambe@1401$')
-    server.sendmail('170320107063.ce.shubham@gmail.com', to, content)
+    server.login('email-id', 'password')
+    server.sendmail('email-id', to, content)
     server.close()
 
 
@@ -316,7 +316,7 @@ if __name__ == '__main__':
 
         elif "calculate" in voice_command:
 
-            app_id = "GYVQYU-PE3LYY3QAR"
+            app_id = "API key of wolframalpha"
             client = wolframalpha.Client(app_id)
             indx = voice_command.lower().split().index('calculate')
             voice_command = voice_command.split()[indx + 1:]
@@ -353,7 +353,7 @@ if __name__ == '__main__':
         elif 'news' in voice_command:
 
             try:
-                news_api = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6756d45ea89946959bb25b8c31af689a"
+                news_api = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=api_key"
                 jsonObj = urlopen(news_api)
                 data = json.load(jsonObj)
                 i = 1
@@ -494,8 +494,8 @@ if __name__ == '__main__':
 
         elif "send message" in voice_command:
             # You need to create an account on Twilio to use this service
-            account_sid = 'ACdd3bdd83233031fbc916aada97e36bed'
-            auth_token = '099f1a4aff53761e6b6666710ba17849'
+            account_sid = 'account_sid'
+            auth_token = 'auth_token'
             client = Client(account_sid, auth_token)
             agree = "no"
             while (agree != "yes"):
@@ -524,21 +524,6 @@ if __name__ == '__main__':
             else:
                 agree == "no"
 
-
-        elif "best friend" in voice_command:
-            engine.setProperty('rate', 130)
-            speak("ohh you asked me about your best friend  let me  guess  ")
-            speak(" Amm  , oh ,  Yes  you  tell  me ,  Chahna is  your best friend .  You also called  her  Fulvdi")
-            speak("hai Diku ,  I  want  to tell you something  secret , which is  Shubham  never told  you  so hear "
-                  "me  properly ")
-            speak("You  are more than a his life . You’re his  best friend , his partner-in-crime, his  other half . "
-                  "You know him  better than he  know hisself. You know what he likes , what he love, what he hate. You "
-                  "applaud his passions and tolerate his faults. You’re there for him, always. And it’s not always "
-                  "about what we say, or what we do – because you, by yourself, is enough. You, with your smile, "
-                  "your laugh, your friendship – it’s more than he deserve. You’ve laughed, you’ve cried, and you’re "
-                  "stronger than ever. Because he is  nothing   without you. You’re part of his  , his life, "
-                  "his  family, his entire world. Love you to best friend forever")
-
         elif "Good Morning" in voice_command:
             speak("A warm" + voice_command)
             speak("How are you Mister")
@@ -558,7 +543,7 @@ if __name__ == '__main__':
 
             # Use the same API key
             # that we have generated earlier
-            client = wolframalpha.Client("GYVQYU-PE3LYY3QAR")
+            client = wolframalpha.Client("api_key")
             res = client.query(voice_command)
 
             try:
