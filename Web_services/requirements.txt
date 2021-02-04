@@ -1,0 +1,27 @@
+appier==1.21.5
+args==0.1.0
+beautifulsoup4==4.9.3
+certifi==2020.12.5
+chardet==4.0.0
+clint==0.5.1
+comtypes==1.1.8
+idna==2.10
+more-itertools==8.6.0
+playsound==1.2.2
+PyAudio @ file:///C:/Users/admin/Downloads/PyAudio-0.2.11-cp39-cp39-win_amd64.whl
+pyjokes==0.6.0
+PyJWT==1.7.1
+pypiwin32==223
+pyttsx3==2.90
+pytz==2021.1
+pywin32==300
+requests==2.25.1
+six==1.15.0
+soupsieve==2.1
+twilio==6.51.1
+twilio-api==0.1.1
+urllib3==1.26.3
+wikipedia==1.4.0
+winshell==0.6
+wolframalpha==4.1.1
+xmltodict==0.12.0
