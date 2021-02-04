@@ -94,8 +94,9 @@ def sendEmail(to, content):
     server.starttls()
 
     # Enable low security in gmail
-    server.login('email_id', 'password')
-    server.sendmail('email_id', to, content)
+
+    server.login('email-id', 'password')
+    server.sendmail('email-id', to, content)
     server.close()
 
 
@@ -316,7 +317,9 @@ if __name__ == '__main__':
 
         elif "calculate" in voice_command:
 
-            app_id = "app_id"
+
+            app_id = "API key of wolframalpha"
+
             client = wolframalpha.Client(app_id)
             indx = voice_command.lower().split().index('calculate')
             voice_command = voice_command.split()[indx + 1:]
@@ -494,7 +497,9 @@ if __name__ == '__main__':
 
         elif "send message" in voice_command:
             # You need to create an account on Twilio to use this service
-            account_sid = 'acoount_sid'
+
+            account_sid = 'account_sid'
+
             auth_token = 'auth_token'
             client = Client(account_sid, auth_token)
             agree = "no"
@@ -543,7 +548,9 @@ if __name__ == '__main__':
 
             # Use the same API key
             # that we have generated earlier
+
             client = wolframalpha.Client("Clien_id")
+
             res = client.query(voice_command)
 
             try:
